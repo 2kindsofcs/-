@@ -13,4 +13,4 @@
   
   main:
   - title: "About"
-    url: docs/_docs/About
+    url: docs/about
