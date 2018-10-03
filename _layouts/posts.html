@@ -4,7 +4,10 @@ layout: archive
 
 {{ content }}
 
-{{page.categories | capitalize | join: ', '}}
+{% for category in page.categories %}
+  <a href="{{site.baseurl}}/category/{{category|slugize}}">{{category|capitalize}}</a>
+{% unless forloop.last %}, {% endunless %}
+{% endfor %}
 
 <ul class="taxonomy__index">
   {% assign postsInYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
