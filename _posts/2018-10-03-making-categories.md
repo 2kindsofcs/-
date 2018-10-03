@@ -18,9 +18,11 @@ categories: general
 
 참고로 아래와 같은 코드는 제대로 작동하지 않는다
 
+ {% raw %} 
 `{{page.categories | capitalize | join: ', '}}`
+ {% endraw %} 
 
-배열에는 capitalize를 적용할 수 없다. 
+리퀴드에서 배열에는 capitalize를 적용할 수 없다. 
 
 
 일단 개인적으로는 아래 블로그에서 실질적인 도움을 많이 받았다.
@@ -33,8 +35,9 @@ categories: general
 2 만든 category 폴더 안에 원하는카테고리명.html 파일을 만들어준다.
 파일 내용은 아래와 같은 식으로 적어줬다. 
 
+
  {% raw %} 
- ```
+```
 ---
 layout: default
 ---
@@ -45,6 +48,7 @@ layout: default
 </ul>
 ```
  {% endraw %} 
+
 
 3 _layouts 폴더의 posts.html에 아래와 같은 코드를 추가하였다. 이렇게하면 포스트 내용 마지막에 해당 포스트가 속한 카테고리가 출력되며, 이를 클릭하면 해당 카테고리의 글 목록 페이지로 이동할 수 있다. (이 부분은 학교 선배님 한 분이 감사하게도 도와주셨다.)
 
