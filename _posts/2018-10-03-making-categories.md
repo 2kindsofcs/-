@@ -33,7 +33,8 @@ categories: general
 2 만든 category 폴더 안에 원하는카테고리명.html 파일을 만들어준다.
 파일 내용은 아래와 같은 식으로 적어줬다. 
 
-```
+ {% raw %} 
+ ```
 ---
 layout: default
 ---
@@ -43,15 +44,18 @@ layout: default
 	{% endfor %}
 </ul>
 ```
+ {% endraw %} 
 
 3 _layouts 폴더의 posts.html에 아래와 같은 코드를 추가하였다. 이렇게하면 포스트 내용 마지막에 해당 포스트가 속한 카테고리가 출력되며, 이를 클릭하면 해당 카테고리의 글 목록 페이지로 이동할 수 있다. (이 부분은 학교 선배님 한 분이 감사하게도 도와주셨다.)
 
+ {% raw %} 
 ```
 {% for category in page.categories %}
   <a href="{{site.baseurl}}/category/{{category|slugize}}">{{category|capitalize}}</a>
 {% unless forloop.last %}, {% endunless %}
 {% endfor %}
 ```
+ {% endraw %} 
 
 4 포스트를 작성할 때 프론트매터에 categories: 원하는카테고리명 을 추가해준다. 
 
