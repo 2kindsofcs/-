@@ -5,8 +5,7 @@ slug: "iterable-and-iterator"
 categories: python
 ---
 
-점프투파이썬 3-3 for문을 보다가, list comprehension을 설명하는 부분에서 "반복가능객체"라는 단어를 보고 파이썬의 iterable과 iterator에 대해 
-검색해보게 되었다. 
+점프투파이썬 3-3 for문을 보다가, list comprehension을 설명하는 부분에서 "반복가능객체"라는 단어를 보고 파이썬의 iterable과 iterator에 대해 검색해보게 되었다. 
 
 iterable이란 요소를 한 번에 하나씩 리턴할 수 있는 객체를 말한다.
 iterator란 next() 메소드를 사용했을 때 순서대로 데이터를 리턴할 수 있는 객체를 말한다. 
@@ -34,11 +33,3 @@ iterator란 next() 메소드를 사용했을 때 순서대로 데이터를 리�
 ```
 
 iterator는 왜 필요한가? 여러 이유가 있겠지만 핵심 중 하나는 "데이터의 형태에는 관심이 없고, 순서대로 데이터를 뽑고 싶다"는 필요를 충족할 수 있다는 것이다. 
-
-
-
-
-
-
-
-
