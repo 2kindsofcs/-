@@ -271,7 +271,6 @@ compress_html:
   ignore:
     envs: development
 
-environment: production
 # Defaults
 defaults:
   # _posts
