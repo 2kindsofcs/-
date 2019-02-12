@@ -9,6 +9,10 @@ layout: archive
 {% unless forloop.last %}, {% endunless %}
 {% endfor %}
 
+<!-- {% if jekyll.environment == 'production' and site.comments.provider and page.comments %} -->
+{% include comments.html %}
+<!-- {% endif %} -->
+
 <ul class="taxonomy__index">
   {% assign postsInYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
   {% for year in postsInYear %}
